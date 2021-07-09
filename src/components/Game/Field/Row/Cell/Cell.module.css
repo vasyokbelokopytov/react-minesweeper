@@ -5,12 +5,9 @@
   position: relative;
 
   transform-style: preserve-3d;
-  /* transform: rotateY(180deg); */
   transition: transform 300ms;
 
   border-radius: 10%;
-
-  /* margin-right: 3px; */
   cursor: pointer;
 }
 
@@ -28,17 +25,20 @@
   align-items: center;
   justify-content: center;
 
-  border-radius: inherit;
-
   position: absolute;
   top: 0;
   left: 0;
+
+  border-radius: inherit;
 }
 
 .front {
   z-index: 2;
   background-color: #7abbdc;
-  /* background-color: rgba(100, 148, 237, 0.267); */
+}
+
+.cell:hover .front {
+  background-color: #a1d6f0;
 }
 
 .back {

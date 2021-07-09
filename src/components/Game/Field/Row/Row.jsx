@@ -12,11 +12,14 @@ const Row = (props) => {
             value={cell.value}
             isOpened={cell.isOpened}
             isFlagged={cell.isFlagged}
+            isSelected={cell.isSelected}
             openCell={props.openCell}
             openBlank={props.openBlank}
             loseGame={props.loseGame}
             setFlag={props.setFlag}
             removeFlag={props.removeFlag}
+            timerId={props.timerId}
+            startTimer={props.startTimer}
           />
         );
       })}
