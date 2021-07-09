@@ -1,0 +1,10 @@
+.field {
+  display: grid;
+  grid-template-columns: repeat(10, 80px);
+  grid-template-rows: repeat(8, 80px);
+  grid-gap: 3px;
+
+  perspective: 900px;
+
+  user-select: none;
+}

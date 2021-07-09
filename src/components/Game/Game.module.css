@@ -1,0 +1,36 @@
+.game {
+  position: relative;
+  font-family: 'Lobster Two', cursive;
+  background-color: inherit;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 40px;
+  color: #ede4d5;
+
+  margin-bottom: 20px;
+}
+
+.messageBox {
+  width: 600px;
+  height: 300px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: #506e7d;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.message {
+  font-size: 60px;
+  font-weight: 400;
+  color: #ede4d5;
+}

@@ -1,0 +1,73 @@
+.cell {
+  width: 80px;
+  height: 80px;
+
+  position: relative;
+
+  transform-style: preserve-3d;
+  /* transform: rotateY(180deg); */
+  transition: transform 300ms;
+
+  border-radius: 10%;
+
+  /* margin-right: 3px; */
+  cursor: pointer;
+}
+
+.opened {
+  transform: rotateY(180deg);
+  transition: transform 300ms;
+}
+
+.front,
+.back {
+  width: inherit;
+  height: inherit;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: inherit;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.front {
+  z-index: 2;
+  background-color: #7abbdc;
+  /* background-color: rgba(100, 148, 237, 0.267); */
+}
+
+.back {
+  z-index: 1;
+  transform: rotateY(180deg);
+
+  font-size: 40px;
+  background-color: #ede4d5;
+}
+
+.bomb {
+  display: block;
+  width: 60px;
+  height: 60px;
+}
+
+.flag {
+  display: block;
+  width: 60px;
+  height: 60px;
+  animation: fall 200ms;
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(-30%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
