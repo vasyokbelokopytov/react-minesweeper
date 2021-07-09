@@ -130,17 +130,19 @@ const Field = (props) => {
   };
 
   const setFlag = ([i, j]) => {
-    props.setField(
-      props.field.map((row, rowIndex) => {
-        return row.map((cell, cellIndex) => {
-          return i === rowIndex && j === cellIndex
-            ? { ...cell, isFlagged: true }
-            : cell;
-        });
-      })
-    );
+    if (props.flags > 0) {
+      props.setField(
+        props.field.map((row, rowIndex) => {
+          return row.map((cell, cellIndex) => {
+            return i === rowIndex && j === cellIndex
+              ? { ...cell, isFlagged: true }
+              : cell;
+          });
+        })
+      );
 
-    props.setFlagsCount(props.flags - 1);
+      props.setFlagsCount(props.flags - 1);
+    }
   };
 
   const removeFlag = ([i, j]) => {
