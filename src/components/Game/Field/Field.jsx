@@ -16,7 +16,7 @@ const Field = (props) => {
           return false;
         }
 
-        return cell.value !== '💣' && !cell.isOpened;
+        return cell.value !== '💣' && cell.value !== null && !cell.isOpened;
       })
     );
   };
