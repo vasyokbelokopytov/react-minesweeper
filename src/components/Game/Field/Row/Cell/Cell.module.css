@@ -30,6 +30,7 @@
   left: 0;
 
   border-radius: inherit;
+  backface-visibility: hidden;
 }
 
 .front {
